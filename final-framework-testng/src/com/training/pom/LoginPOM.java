@@ -14,13 +14,13 @@ public class LoginPOM {
 	}
 	
 	@FindBy(id="login")
-	private WebElement userName; 
+	private WebElement userName;
 	
 	@FindBy(id="password")
 	private WebElement password;
 	
 	@FindBy(id="formLogin_submitAuth")
-	private WebElement loginBtn; 
+	private WebElement loginBtn;
 	
 	public void sendUserName(String userName) {
 		this.userName.clear();

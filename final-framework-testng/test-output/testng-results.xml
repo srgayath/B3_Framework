@@ -1,89 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27358" started-at="2018-12-18T18:16:26Z" finished-at="2018-12-18T18:16:53Z">
+  <suite name="Default suite" duration-ms="117236" started-at="2019-01-24T06:03:41Z" finished-at="2019-01-24T06:05:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27358" started-at="2018-12-18T18:16:26Z" finished-at="2018-12-18T18:16:53Z">
-      <class name="com.training.regression.tests.LoginExcelTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2018-12-18T23:46:26Z" finished-at="2018-12-18T23:46:26Z">
+    <test name="Default test" duration-ms="117236" started-at="2019-01-24T06:03:41Z" finished-at="2019-01-24T06:05:39Z">
+      <class name="com.training.functional.tests.CYTC_005">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_005@6a41eaa2]" name="setUpBeforeClass" is-config="true" duration-ms="1" started-at="2019-01-24T06:05:16Z" finished-at="2019-01-24T06:05:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="5796" started-at="2018-12-18T23:46:27Z" finished-at="2018-12-18T23:46:32Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_005@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="4418" started-at="2019-01-24T06:05:16Z" finished-at="2019-01-24T06:05:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="2700" started-at="2018-12-18T23:46:32Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hello]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="cytc_005()[pri:0, instance:com.training.functional.tests.CYTC_005@6a41eaa2]" name="cytc_005" duration-ms="14482" started-at="2019-01-24T06:05:20Z" finished-at="2019-01-24T06:05:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="788" started-at="2018-12-18T23:46:35Z" finished-at="2018-12-18T23:46:36Z">
+        </test-method> <!-- cytc_005 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_005@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="3845" started-at="2019-01-24T06:05:35Z" finished-at="2019-01-24T06:05:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="4885" started-at="2018-12-18T23:46:36Z" finished-at="2018-12-18T23:46:41Z">
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.training.functional.tests.CYTC_005 -->
+      <class name="com.training.functional.tests.CYTC_001">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_001@91161c7]" name="setUpBeforeClass" is-config="true" duration-ms="13" started-at="2019-01-24T06:03:41Z" finished-at="2019-01-24T06:03:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="3104" started-at="2018-12-18T23:46:41Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[naveen]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[testing@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_001@91161c7]" name="beforeMethod" is-config="true" duration-ms="5748" started-at="2019-01-24T06:03:41Z" finished-at="2019-01-24T06:03:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="767" started-at="2018-12-18T23:46:44Z" finished-at="2018-12-18T23:46:45Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="cytc_001()[pri:0, instance:com.training.functional.tests.CYTC_001@91161c7]" name="cytc_001" duration-ms="27763" started-at="2019-01-24T06:03:47Z" finished-at="2019-01-24T06:04:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="setUp" is-config="true" duration-ms="5306" started-at="2018-12-18T23:46:45Z" finished-at="2018-12-18T23:46:50Z">
+        </test-method> <!-- cytc_001 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_001@91161c7]" name="afterMethod" is-config="true" duration-ms="3905" started-at="2019-01-24T06:04:15Z" finished-at="2019-01-24T06:04:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginDBTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="loginDBTest" duration-ms="2595" started-at="2018-12-18T23:46:50Z" data-provider="excel-inputs" finished-at="2018-12-18T23:46:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[delete]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[delete]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.training.functional.tests.CYTC_001 -->
+      <class name="com.training.functional.tests.CYTC_002">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_002@604ed9f0]" name="setUpBeforeClass" is-config="true" duration-ms="5" started-at="2019-01-24T06:04:19Z" finished-at="2019-01-24T06:04:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDBTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.LoginExcelTest@8bd1b6a]" name="tearDown" is-config="true" duration-ms="795" started-at="2018-12-18T23:46:53Z" finished-at="2018-12-18T23:46:53Z">
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_002@604ed9f0]" name="beforeMethod" is-config="true" duration-ms="4505" started-at="2019-01-24T06:04:19Z" finished-at="2019-01-24T06:04:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.training.regression.tests.LoginExcelTest -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="cytc_002()[pri:0, instance:com.training.functional.tests.CYTC_002@604ed9f0]" name="cytc_002" duration-ms="10060" started-at="2019-01-24T06:04:23Z" finished-at="2019-01-24T06:04:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cytc_002 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_002@604ed9f0]" name="afterMethod" is-config="true" duration-ms="3862" started-at="2019-01-24T06:04:33Z" finished-at="2019-01-24T06:04:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.training.functional.tests.CYTC_002 -->
+      <class name="com.training.functional.tests.CYTC_003">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_003@6a4f787b]" name="setUpBeforeClass" is-config="true" duration-ms="1" started-at="2019-01-24T06:04:37Z" finished-at="2019-01-24T06:04:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_003@6a4f787b]" name="beforeMethod" is-config="true" duration-ms="4671" started-at="2019-01-24T06:04:37Z" finished-at="2019-01-24T06:04:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="cytc_003()[pri:0, instance:com.training.functional.tests.CYTC_003@6a4f787b]" name="cytc_003" duration-ms="13229" started-at="2019-01-24T06:04:42Z" finished-at="2019-01-24T06:04:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cytc_003 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_003@6a4f787b]" name="afterMethod" is-config="true" duration-ms="3873" started-at="2019-01-24T06:04:55Z" finished-at="2019-01-24T06:04:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.training.functional.tests.CYTC_003 -->
+      <class name="com.training.functional.tests.CYTC_004">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_004@685cb137]" name="setUpBeforeClass" is-config="true" duration-ms="4" started-at="2019-01-24T06:04:59Z" finished-at="2019-01-24T06:04:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_004@685cb137]" name="beforeMethod" is-config="true" duration-ms="4681" started-at="2019-01-24T06:04:59Z" finished-at="2019-01-24T06:05:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="cytc_004()[pri:0, instance:com.training.functional.tests.CYTC_004@685cb137]" name="cytc_004" duration-ms="8275" started-at="2019-01-24T06:05:04Z" finished-at="2019-01-24T06:05:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cytc_004 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_004@685cb137]" name="afterMethod" is-config="true" duration-ms="3854" started-at="2019-01-24T06:05:12Z" finished-at="2019-01-24T06:05:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.training.functional.tests.CYTC_004 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

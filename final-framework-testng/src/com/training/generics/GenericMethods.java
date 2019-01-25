@@ -1,7 +1,6 @@
 package com.training.generics;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +13,8 @@ import org.openqa.selenium.WebElement;
  * @since 17-Dec-2018 
  */
 public class GenericMethods {
-	WebDriver driver ; 
+	WebDriver driver;
+	
 	
 	public GenericMethods(WebDriver driver){
 		this.driver = driver;
