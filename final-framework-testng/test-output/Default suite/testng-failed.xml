@@ -3,30 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.functional.tests.CYTC_004">
+      <class name="com.training.functional.tests.CYTC_034">
         <methods>
-          <include name="cytc_004"/>
-          <include name="setUpBeforeClass"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.training.functional.tests.CYTC_004 -->
-      <class name="com.training.functional.tests.CYTC_003">
-        <methods>
-          <include name="cytc_003"/>
           <include name="afterMethod"/>
           <include name="setUpBeforeClass"/>
           <include name="beforeMethod"/>
+          <include name="cytc_034_repayLoan"/>
         </methods>
-      </class> <!-- com.training.functional.tests.CYTC_003 -->
-      <class name="com.training.functional.tests.CYTC_005">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="cytc_005"/>
-          <include name="setUpBeforeClass"/>
-        </methods>
-      </class> <!-- com.training.functional.tests.CYTC_005 -->
+      </class> <!-- com.training.functional.tests.CYTC_034 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
