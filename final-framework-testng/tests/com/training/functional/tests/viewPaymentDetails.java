@@ -13,13 +13,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
-public class CYTC_031 {
+public class viewPaymentDetails {
 	private WebDriver driver;
 	private String baseUrl;
 	private static Properties properties;
@@ -33,39 +32,33 @@ public class CYTC_031 {
 	  properties.load(inStream);
   }
   
-//  To verify whether application allows member  to view added advertisement by the admin  
+  //To Verify whether application allows member to view payment details made by admin
   @Test
-  public void cytc_031() throws InterruptedException {
+  public void cytc_032() throws InterruptedException {
 	  cyclosPOM.cyclosGenericLogin("admin","12345");
-	  screenShot.captureScreenShot("CYTC03101");
+	  screenShot.captureScreenShot("CYTC03201");
 	  Thread.sleep(2000);
 	  cyclosPOM.enterMemberName("srivalli");
 	  Thread.sleep(2000);
-	  screenShot.captureScreenShot("CYTC03102");
-	  cyclosPOM.manageAdvertisements();
+	  screenShot.captureScreenShot("CYTC03202");
+	  cyclosPOM.paymentToMember();
 	  Thread.sleep(2000);
-	  screenShot.captureScreenShot("CYTC03103");
-	  cyclosPOM.insertNewAdBtn();
-	  screenShot.captureScreenShot("CYTC03104");
+	  cyclosPOM.enterAmount("500");
+	  cyclosPOM.transactionType("Debit to member");
+	  cyclosPOM.descriptionText("Bonus");
 	  Thread.sleep(2000);
-	  String ExpectedTitle = "New ad";
-	  cyclosPOM.createNewAd(ExpectedTitle, "Example ad category", "600", "Ad for a member");
-	  screenShot.captureScreenShot("CYTC03105");
-	  Thread.sleep(2000);
+	  screenShot.captureScreenShot("CYTC03203");
+	  cyclosPOM.submitPayment();
+	  screenShot.captureScreenShot("CYTC03204");
 	  cyclosPOM.cyclosLogout();
-	  Thread.sleep(1000);
 	  cyclosPOM.cyclosGenericLogin("srivalli","srivalli");
-	  Thread.sleep(2000);
-	  screenShot.captureScreenShot("CYTC03105");
-	  cyclosPOM.personalTabOpt();
 	  Thread.sleep(1000);
-	  cyclosPOM.advertisementsLink();
-	  Thread.sleep(1000);
-	  screenShot.captureScreenShot("CYTC03106");
-	  String Actual = driver.findElement(By.xpath("//div[@class='productTitle']/a")).getText();
-	  cyclosPOM.memberLogout();
-	  Thread.sleep(1000);
-	  Assert.assertEquals(Actual, ExpectedTitle);
+	  cyclosPOM.accountOption();
+	  cyclosPOM.accountInformation();
+	  screenShot.captureScreenShot("CYTC03205");
+	  String Actual = cyclosPOM.ActDetails();
+	  String Expected = "Bonus";
+	  Assert.assertEquals(Actual, Expected);
   }
   
   @BeforeMethod
@@ -85,5 +78,6 @@ public class CYTC_031 {
 	  Thread.sleep(3000);
 	  driver.quit();
   }
+
 
 }

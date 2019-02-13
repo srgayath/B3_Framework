@@ -75,8 +75,15 @@ public class RegisterUserPOM {
 	@FindBy(id="btn")
 	private WebElement confirmBtn;
 	
-	@FindBy(xpath="//table[@class='defaultTable']//td[@align='center']")
+	@FindBy(xpath="//td[@align='center']//tbody//tbody//tr[1]//td[1]")
 	private WebElement confirmText;
+	
+	@FindBy(id="backButton")
+	private WebElement backBtn;
+	
+	public void backButton() {
+		this.backBtn.click();
+	}
 	
 	public void registerBtn() {
 		this.loginRegister.click();
@@ -117,24 +124,52 @@ public class RegisterUserPOM {
 		}
 	}
 	
-	public void enterAddress(String address, String postal, String city, String area) {
+	public void enterAddressField(String address) {
 		this.addressField.clear();
 		this.addressField.sendKeys(address);
+	}
+	
+	public void enterPostalCode(String postal) {
 		this.postalCode.clear();
 		this.postalCode.sendKeys(postal);
+	}
+	
+	public void enterCity(String city) {
 		this.cityName.clear();
 		this.cityName.sendKeys(city);
+	}
+	
+	public void enterAreaName() {
 		Select s = new Select(this.areaDropDown);
 		s.selectByIndex(1);
 	}
 	
-	public void enterPhone(String phone, String mobile, String fax) {
+	public void enterAddress(String address, String postal, String city) {
+		enterAddressField(address);
+		enterPostalCode(postal);
+		enterCity(city);
+		enterAreaName();
+	}
+	
+	public void enterPhone(String phone) {
 		this.phoneNumber.clear();
 		this.phoneNumber.sendKeys(phone);
+	}
+	
+	public void enterMobile(String mobile) {
 		this.mobileNumber.clear();
 		this.mobileNumber.sendKeys(mobile);
+	}
+	
+	public void enterFax(String fax) {
 		this.faxNumber.clear();
 		this.faxNumber.sendKeys(fax);
+	}
+	
+	public void enterPhoneNumber(String phone, String mobile, String fax) {
+		enterPhone(phone);
+		enterMobile(mobile);
+		enterFax(fax);
 	}
 	
 	public void enterUrl(String urlName) {
@@ -142,11 +177,19 @@ public class RegisterUserPOM {
 		this.url.sendKeys(urlName);
 	}
 	
-	public void enterPasswords(String passWord, String confirmPassWord) {
+	public void enterPassword(String password) {
 		this.password.clear();
-		this.password.sendKeys(passWord);
+		this.password.sendKeys(password);
+	}
+	
+	public void enterConfirmPassword(String confirmPassWord) {
 		this.confirmPassword.clear();
 		this.confirmPassword.sendKeys(confirmPassWord);
+	}
+	
+	public void enterPasswords(String passWord, String confirmPassWord) {
+		enterPassword(passWord);
+		enterConfirmPassword(confirmPassWord);
 	}
 	
 	public void submitButton() {
@@ -159,6 +202,22 @@ public class RegisterUserPOM {
 	
 	public String confirmtext() {
 		return this.confirmText.getText();
+	}
+	
+	public boolean getAssertValue(String userName) {
+		String confText = this.confirmText.getText();
+		boolean actualResult = true;
+		boolean Actual1 = (confText.contains("Thanks for registering!"));
+		boolean Actual2 = (confText.contains("Invalid date"));
+		boolean Actual3 = (confText.contains("The given login name ("+userName+") is already in use"));
+		boolean Actual4 = (confText.contains("Passwords are not Equal"));
+		if (Actual1) {
+			actualResult = false;
+		}
+		else if (Actual2||Actual3||Actual4) {
+			actualResult = true;
+		}
+		return actualResult;
 	}
 
 }

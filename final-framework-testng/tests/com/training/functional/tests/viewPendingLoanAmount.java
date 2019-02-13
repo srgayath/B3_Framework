@@ -16,7 +16,7 @@ import com.training.pom.CyclosPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class CYTC_034 {
+public class viewPendingLoanAmount {
 	private static WebDriver driver;
 	private static String baseUrl;
 	private static Properties properties;
@@ -40,6 +40,7 @@ public class CYTC_034 {
 	  driver.get(baseUrl);
   }
   
+  //To verify whether application allows admin to view pending loan amount after loan amount paid by member
   @Test
   public void cytc_034() throws Exception {
 	  cyclosPOM.cyclosGenericLogin("srivalli","srivalli");

@@ -1,101 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="146489" started-at="2019-02-01T07:47:58Z" finished-at="2019-02-01T07:50:25Z">
+  <suite name="Default suite" duration-ms="41667" started-at="2019-02-11T11:25:53Z" finished-at="2019-02-11T11:26:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="146489" started-at="2019-02-01T07:47:58Z" finished-at="2019-02-01T07:50:25Z">
-      <class name="com.training.functional.tests.CYTC_031">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_031@91161c7]" name="setUpBeforeClass" is-config="true" duration-ms="17" started-at="2019-02-01T07:47:58Z" finished-at="2019-02-01T07:47:58Z">
+    <test name="Default test" duration-ms="41667" started-at="2019-02-11T11:25:53Z" finished-at="2019-02-11T11:26:35Z">
+      <class name="com.training.functional.tests.giveAccessToMultipleUsers">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.giveAccessToMultipleUsers@3bfdc050]" name="setUpBeforeClass" is-config="true" duration-ms="10480" started-at="2019-02-11T11:25:53Z" finished-at="2019-02-11T11:26:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_031@91161c7]" name="beforeMethod" is-config="true" duration-ms="6012" started-at="2019-02-01T07:47:58Z" finished-at="2019-02-01T07:48:04Z">
+        <test-method status="PASS" signature="cytc_003(java.lang.String)[pri:0, instance:com.training.functional.tests.giveAccessToMultipleUsers@3bfdc050]" name="cytc_003" duration-ms="9146" started-at="2019-02-11T11:26:05Z" data-provider="test-data" finished-at="2019-02-11T11:26:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manzoor3]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="cytc_031()[pri:0, instance:com.training.functional.tests.CYTC_031@91161c7]" name="cytc_031" duration-ms="28478" started-at="2019-02-01T07:48:04Z" finished-at="2019-02-01T07:48:33Z">
+        </test-method> <!-- cytc_003 -->
+        <test-method status="PASS" signature="cytc_003(java.lang.String)[pri:0, instance:com.training.functional.tests.giveAccessToMultipleUsers@3bfdc050]" name="cytc_003" duration-ms="8565" started-at="2019-02-11T11:26:14Z" data-provider="test-data" finished-at="2019-02-11T11:26:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[alex3]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cytc_031 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_031@91161c7]" name="afterMethod" is-config="true" duration-ms="3891" started-at="2019-02-01T07:48:33Z" finished-at="2019-02-01T07:48:37Z">
+        </test-method> <!-- cytc_003 -->
+        <test-method status="PASS" signature="cytc_003(java.lang.String)[pri:0, instance:com.training.functional.tests.giveAccessToMultipleUsers@3bfdc050]" name="cytc_003" duration-ms="8680" started-at="2019-02-11T11:26:22Z" data-provider="test-data" finished-at="2019-02-11T11:26:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mariya3]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.training.functional.tests.CYTC_031 -->
-      <class name="com.training.functional.tests.CYTC_032">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_032@604ed9f0]" name="setUpBeforeClass" is-config="true" duration-ms="5" started-at="2019-02-01T07:48:37Z" finished-at="2019-02-01T07:48:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_032@604ed9f0]" name="beforeMethod" is-config="true" duration-ms="4756" started-at="2019-02-01T07:48:37Z" finished-at="2019-02-01T07:48:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="cytc_032()[pri:0, instance:com.training.functional.tests.CYTC_032@604ed9f0]" name="cytc_032" duration-ms="19621" started-at="2019-02-01T07:48:41Z" finished-at="2019-02-01T07:49:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cytc_032 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_032@604ed9f0]" name="afterMethod" is-config="true" duration-ms="3881" started-at="2019-02-01T07:49:01Z" finished-at="2019-02-01T07:49:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.training.functional.tests.CYTC_032 -->
-      <class name="com.training.functional.tests.CYTC_033">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_033@6a4f787b]" name="setUpBeforeClass" is-config="true" duration-ms="1" started-at="2019-02-01T07:49:05Z" finished-at="2019-02-01T07:49:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_033@6a4f787b]" name="beforeMethod" is-config="true" duration-ms="4719" started-at="2019-02-01T07:49:05Z" finished-at="2019-02-01T07:49:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="cytc_033()[pri:0, instance:com.training.functional.tests.CYTC_033@6a4f787b]" name="cytc_033" duration-ms="20919" started-at="2019-02-01T07:49:10Z" finished-at="2019-02-01T07:49:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cytc_033 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_033@6a4f787b]" name="afterMethod" is-config="true" duration-ms="3831" started-at="2019-02-01T07:49:31Z" finished-at="2019-02-01T07:49:34Z">
+        </test-method> <!-- cytc_003 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.giveAccessToMultipleUsers@3bfdc050]" name="afterMethod" is-config="true" duration-ms="3890" started-at="2019-02-11T11:26:31Z" finished-at="2019-02-11T11:26:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.training.functional.tests.CYTC_033 -->
-      <class name="com.training.functional.tests.CYTC_034">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_034@685cb137]" name="setUpBeforeClass" is-config="true" duration-ms="1" started-at="2019-02-01T07:49:34Z" finished-at="2019-02-01T07:49:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_034@685cb137]" name="beforeMethod" is-config="true" duration-ms="4509" started-at="2019-02-01T07:49:34Z" finished-at="2019-02-01T07:49:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="cytc_034()[pri:0, instance:com.training.functional.tests.CYTC_034@685cb137]" name="cytc_034" duration-ms="23342" started-at="2019-02-01T07:49:39Z" finished-at="2019-02-01T07:50:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cytc_034 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_034@685cb137]" name="afterMethod" is-config="true" duration-ms="3814" started-at="2019-02-01T07:50:02Z" finished-at="2019-02-01T07:50:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.training.functional.tests.CYTC_034 -->
-      <class name="com.training.functional.tests.CYTC_035">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.functional.tests.CYTC_035@6a41eaa2]" name="setUpBeforeClass" is-config="true" duration-ms="2" started-at="2019-02-01T07:50:06Z" finished-at="2019-02-01T07:50:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.training.functional.tests.CYTC_035@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="4444" started-at="2019-02-01T07:50:06Z" finished-at="2019-02-01T07:50:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="cytc_035()[pri:0, instance:com.training.functional.tests.CYTC_035@6a41eaa2]" name="cytc_035" duration-ms="10387" started-at="2019-02-01T07:50:11Z" finished-at="2019-02-01T07:50:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cytc_035 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.training.functional.tests.CYTC_035@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="3818" started-at="2019-02-01T07:50:21Z" finished-at="2019-02-01T07:50:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.training.functional.tests.CYTC_035 -->
+      </class> <!-- com.training.functional.tests.giveAccessToMultipleUsers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -17,7 +17,7 @@ import com.training.pom.RegisterUserPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class CYTC_004 {
+public class giveAccessToMember {
 	private WebDriver driver;
 	private String baseUrl;
 	private static Properties properties;
@@ -31,16 +31,26 @@ public class CYTC_004 {
 	  properties.load(inStream);
   }
   
-//	To verify whether application allows user to login as a member on the application  
+//To Verify whether application allows admin to provide access to registered member
 @Test
-public void cytc_004() throws InterruptedException {
+public void cytc_003() throws InterruptedException {
 	  Thread.sleep(3000);
-	  cyclosPOM.cyclosGenericLogin("srivalli","pass12345");
-	  screenShot.captureScreenShot("CYTC00401");
+	  cyclosPOM.cyclosGenericLogin("admin","12345");
+	  screenShot.captureScreenShot("CYTC00301");
 	  Thread.sleep(3000);
-	  String Expected = "Logged user: srivalli - Srivalli";
-	  String Actual = cyclosPOM.getLoginUser();
-	  Assert.assertEquals(Actual, Expected);
+	  cyclosPOM.enterMemberName("srivalli1");
+	  Thread.sleep(2000);
+	  screenShot.captureScreenShot("CYTC00302");
+	  cyclosPOM.changeMemberSubmit();
+	  Thread.sleep(1000);
+	  cyclosPOM.selectNewGroup("Full members");
+	  cyclosPOM.enterComments("Full access to member");
+	  screenShot.captureScreenShot("CYTC00303");
+	  cyclosPOM.submitChange();
+	  driver.switchTo().alert().accept();
+	  String Expected = "Full members";
+	  String Actual = cyclosPOM.getNewGroup();
+	  Assert.assertEquals(Actual, Expected);	  
 }
   
   @BeforeMethod

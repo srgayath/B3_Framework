@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.functional.tests.CYTC_034">
+      <class name="com.training.functional.tests.giveAccessToMultipleUsers">
         <methods>
+          <include name="cytc_003"/>
           <include name="afterMethod"/>
           <include name="setUpBeforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="cytc_034_repayLoan"/>
         </methods>
-      </class> <!-- com.training.functional.tests.CYTC_034 -->
+      </class> <!-- com.training.functional.tests.giveAccessToMultipleUsers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

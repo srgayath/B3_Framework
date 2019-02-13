@@ -17,7 +17,7 @@ import com.training.pom.RegisterUserPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class CYTC_003 {
+public class modifyMemberDetails {
 	private WebDriver driver;
 	private String baseUrl;
 	private static Properties properties;
@@ -31,26 +31,28 @@ public class CYTC_003 {
 	  properties.load(inStream);
   }
   
-//To Verify whether application allows admin to provide access to registered member
+//	To Verify whether application allows member to modify the profile details in My Profile Page  
 @Test
-public void cytc_003() throws InterruptedException {
+public void cytc_005() throws InterruptedException {
 	  Thread.sleep(3000);
-	  cyclosPOM.cyclosGenericLogin("admin","12345");
-	  screenShot.captureScreenShot("CYTC00301");
+	  cyclosPOM.cyclosGenericLogin("srivalli2","pass12345");
+	  screenShot.captureScreenShot("CYTC00501");
 	  Thread.sleep(3000);
-	  cyclosPOM.enterMemberName("srivalli");
+	  cyclosPOM.myProfileOption();
+	  screenShot.captureScreenShot("CYTC00502");
 	  Thread.sleep(2000);
-	  screenShot.captureScreenShot("CYTC00302");
-	  cyclosPOM.changeMemberSubmit();
+	  cyclosPOM.changeProfileBtn();
+	  screenShot.captureScreenShot("CYTC00503");
 	  Thread.sleep(1000);
-	  cyclosPOM.selectNewGroup("Full members");
-	  cyclosPOM.enterComments("Full access to member");
-	  screenShot.captureScreenShot("CYTC00303");
-	  cyclosPOM.submitChange();
+	  cyclosPOM.changeAddress("Raidurgam");
+	  cyclosPOM.saveButton();
+	  screenShot.captureScreenShot("CYTC00504");
+	  System.out.println(driver.switchTo().alert().getText());
 	  driver.switchTo().alert().accept();
-	  String Expected = "Full members";
-	  String Actual = cyclosPOM.getNewGroup();
-	  Assert.assertEquals(Actual, Expected);	  
+	  screenShot.captureScreenShot("CYTC00505");
+	  String Actual = cyclosPOM.verifyAddress();
+	  String Expected = "Raidurgam";
+	  Assert.assertEquals(Actual, Expected);
 }
   
   @BeforeMethod

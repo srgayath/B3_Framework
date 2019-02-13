@@ -144,6 +144,13 @@ public class CyclosPOM {
 	@FindBy(id="submenu2.5")
 	private WebElement systemPayment;
 	
+	@FindBy(id="menu0")
+	private WebElement homeMenu;
+	
+	public void clickHomeMenu() {
+		this.homeMenu.click();
+	}
+	
 	public void cyclosLogout() throws InterruptedException {
 		this.cyclosLogOut.click();
 		Thread.sleep(1000);

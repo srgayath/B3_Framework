@@ -18,7 +18,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
-public class CYTC_035 {
+public class verifySystemPaymentMember {
 		private static WebDriver driver;
 		private static String baseUrl;
 		private static Properties properties;
@@ -41,7 +41,8 @@ public class CYTC_035 {
 		  // open the browser
 		  driver.get(baseUrl);
 	  }
-	  
+
+//To verify whether application allows member to perform system payment & details get displayed in Account information module
   @Test
   public void cytc_035() throws InterruptedException {
 	  cyclosPOM.cyclosGenericLogin("srivalli","srivalli");

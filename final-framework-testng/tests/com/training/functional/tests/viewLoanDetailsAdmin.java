@@ -13,11 +13,10 @@ import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
 import com.training.pom.CyclosPOM;
-import com.training.pom.RegisterUserPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class CYTC_002 {
+public class viewLoanDetailsAdmin {
 	private WebDriver driver;
 	private String baseUrl;
 	private static Properties properties;
@@ -31,30 +30,42 @@ public class CYTC_002 {
 	  properties.load(inStream);
   }
   
-//	To verify whether application allows admin to get logged in into application
+  //To verify whether application allows admin to view loan details in view loans
   @Test
-  public void cytc_002() throws InterruptedException {
-	  Thread.sleep(3000);
+  public void cytc_033() throws InterruptedException{
 	  cyclosPOM.cyclosGenericLogin("admin","12345");
-	  screenShot.captureScreenShot("CYTC00201");
+	  screenShot.captureScreenShot("CYTC03301");
 	  Thread.sleep(2000);
-	  String Expected = "Logged user: admin - Administrator";
-	  String Actual = cyclosPOM.getLoginUser();
+	  cyclosPOM.enterMemberName("srivalli");
+	  Thread.sleep(2000);
+	  screenShot.captureScreenShot("CYTC03302");
+	  cyclosPOM.grantLoan();
+	  Thread.sleep(2000);
+	  cyclosPOM.enterLoanAmount("10000");
+	  Thread.sleep(1000);
+	  cyclosPOM.enterLoanDescription("Misc Loan");
+	  Thread.sleep(1000);
+	  screenShot.captureScreenShot("CYTC03303");
+	  cyclosPOM.submitLoan();
+	  screenShot.captureScreenShot("CYTC03304");
+	  Thread.sleep(1000);
+	  driver.switchTo().alert().accept();
+	  Thread.sleep(2000);
+	  cyclosPOM.searchLoan();
+	  screenShot.captureScreenShot("CYTC03305");
+	  String Actual = cyclosPOM.getLoanDesc();
+	  String Expected = "Misc Loan";
 	  Assert.assertEquals(Actual, Expected);
-	  cyclosPOM.cyclosLogout();
-	  screenShot.captureScreenShot("CYTC00202");
-	  Thread.sleep(2000);
   }
   
   @BeforeMethod
   public void beforeMethod() throws Exception {
 	  //Launch URL
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
-		cyclosPOM = new CyclosPOM(driver);
 		baseUrl = properties.getProperty("baseURL");
-		new RegisterUserPOM(driver);
+		cyclosPOM = new CyclosPOM(driver);
 		screenShot = new ScreenShot(driver); 
-		// open the browser 
+		// open the browser
 		driver.get(baseUrl);
   }
 
@@ -64,5 +75,4 @@ public class CYTC_002 {
 	  Thread.sleep(3000);
 	  driver.quit();
   }
-
 }
