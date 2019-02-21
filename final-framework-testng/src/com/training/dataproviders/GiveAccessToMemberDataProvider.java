@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import com.training.bean.NewMemberBean;
 import com.training.dao.AddNewMemberDao;
 import com.training.readexcel.ApachePOIExcelGiveMemberAccess;
+import com.training.readexcel.ApachePOIExcelRead;
 import com.training.readexcel.ReadExcel;
 
 public class GiveAccessToMemberDataProvider {
@@ -44,13 +45,14 @@ public class GiveAccessToMemberDataProvider {
 	
 	@DataProvider(name = "test-data")
 	public Object[][] getExcelData(){
-		String fileName ="C:/Users/SRIVALLIPAVANAGAYATH/Desktop/Selenium Project Files/CYCTD_102.xlsx"; 
-		return new ApachePOIExcelGiveMemberAccess().getExcelContent(fileName); 
+		String fileName ="https://github.com/srgayath/B3_Framework/tree/master/final-framework-testng/resources/TestData_Cyclos.xlsx"; 
+		String sheetName= "CYCTD_102";
+		return new ApachePOIExcelRead().getExcelContent(fileName,sheetName);
 	}
 	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
-		return new ReadExcel().getExcelData("C:/Users/SRIVALLIPAVANAGAYATH/Desktop/Selenium Project Files/CYCTD_102.xls", "Input"); 
+		return new ReadExcel().getExcelData("https://github.com/srgayath/B3_Framework/tree/master/final-framework-testng/resources/TestData_Cyclos.xlsx", "CYCTD_102"); 
 	}
 }

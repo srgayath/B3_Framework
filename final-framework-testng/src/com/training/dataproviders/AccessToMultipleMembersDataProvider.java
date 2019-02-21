@@ -31,13 +31,14 @@ public class AccessToMultipleMembersDataProvider {
 	
 	@DataProvider(name = "test-data")
 	public Object[][] getExcelData(){
-		String fileName ="C:/Users/SRIVALLIPAVANAGAYATH/Desktop/Selenium Project Files/CYCTD_003.xlsx"; 
-		return new ApachePOIExcelGiveMemberAccess().getExcelContent(fileName); 
+		String fileName ="https://github.com/srgayath/B3_Framework/tree/master/final-framework-testng/resources/TestData_Cyclos.xlsx"; 
+		String sheetName = "CYCTD_003";
+		return new ApachePOIExcelRead().getExcelContent(fileName,sheetName); 
 	}
 	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
-		return new ReadExcel().getExcelData("C:/Users/SRIVALLIPAVANAGAYATH/Desktop/Selenium Project Files/CYCTD_003.xls", "Input"); 
+		return new ReadExcel().getExcelData("https://github.com/srgayath/B3_Framework/tree/master/final-framework-testng/resources/TestData_Cyclos.xlsx", "CYCTD_003"); 
 	}
 }

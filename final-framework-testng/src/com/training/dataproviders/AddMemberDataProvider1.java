@@ -45,13 +45,14 @@ public class AddMemberDataProvider1 {
 	
 	@DataProvider(name = "test-data")
 	public Object[][] getExcelData(){
-		String fileName ="C:/Users/SRIVALLIPAVANAGAYATH/Desktop/Selenium Project Files/CYCTD_002.xlsx"; 
-		return new ApachePOIExcelReadValidData().getExcelContent(fileName); 
+		String fileName ="https://github.com/srgayath/B3_Framework/tree/master/final-framework-testng/resources/TestData_Cyclos.xlsx";
+		String sheetName= "CYCTD_002";
+		return new ApachePOIExcelRead().getExcelContent(fileName,sheetName);
 	}
 	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
-		return new ReadExcel().getExcelData("C:/Users/SRIVALLIPAVANAGAYATH/Desktop/Selenium Project Files/CYCTD_002.xls", "Input"); 
+		return new ReadExcel().getExcelData("https://github.com/srgayath/B3_Framework/tree/master/final-framework-testng/resources/TestData_Cyclos.xlsx", "CYCTD_002"); 
 	}
 }
